@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import json
 import networkx as nx
 import numpy as np
@@ -8,8 +7,6 @@ from itertools import count, product
 from typing import List, Dict, Union, Callable, Any
 from transformers import AutoTokenizer
 from const.params import mod, try_num, feasible_symbols
-
-# iGSM imports for problem generation & correctness checking:
 from data_gen.prototype.id_gen import IdGen_PT
 from math_gen.problem_gen import Problem,Expression
 from tools.tools_test import true_correct
@@ -287,7 +284,7 @@ def rebuild_problem_from_json(data_dict: dict) -> Problem:
     if question_index is not None:
         problem.ques_idx = tuple(question_index)
 
-    # --- 修改 topological_order 重建过程 ---
+    # topological_order
     topo_list = data_dict.get("topological_order", [])
     if topo_list:
         problem.topological_order = [
@@ -336,7 +333,7 @@ def build_name2param_dict(problem: Problem):
         problem.name2param_dict[param_name] = param
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-# 3) Example usage
+# Example
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 def example_demo(op =3):
     from data_gen.prototype.id_gen import IdGen_PT
