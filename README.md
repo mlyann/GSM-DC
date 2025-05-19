@@ -118,7 +118,7 @@ Metrics:
 
 To test your own LLM using the GSM-DC dataset:
 - Run `test_batch_saved.py`
-- Set `MODEL_PATH` and `DATASET_PATH` to your HuggingFace repo or checkpoint
+- Set `MODEL_PATH` and `DATASET_PATH` to your HuggingFace repo or checkpoint (Relase after paper submission and review)
 - Optionally enable tree search and PRM reranking
 
 ---
