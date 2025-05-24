@@ -137,8 +137,7 @@ This project is inspired by and builds upon:
 ```bibtex
 @article{gsm-dc2025,
   title={How Is LLM Reasoning Distracted by Irrelevant Context? An Analysis Using a Controlled Benchmark},
-  author={Anonymous},
-  journal={EMNLP},
+  author={Anonymous}
   year={2025}
 }
 ```
